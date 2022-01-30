@@ -1,7 +1,7 @@
 package com.wearethetech.learn;
 
 import java.io.File;
-import java.io.IOException;
+
 
 /**
  * Hello world!
@@ -19,15 +19,13 @@ public class App
     }
 
     public static String processInput(String inputFileName){
-        File inputFile;
-        try {
-            inputFile = File.createTempFile(inputFileName, ".txt");
-            boolean exists = inputFile.exists();
-        } catch (IOException e){
-            e.printStackTrace();
+        File inputFile = new File(inputFileName);
+        boolean exists = inputFile.exists();
 
-        }
-        return "Arg: "+inputFileName;
+        // JSON
+
+
+        return inputFileName+ " "+exists;
     }
 
 }

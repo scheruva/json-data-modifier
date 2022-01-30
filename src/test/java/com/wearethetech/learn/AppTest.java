@@ -11,7 +11,7 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-    private String INPUT = "test";
+    private String INPUT = "pom.xml";
 
     /**
      * Create the test case
@@ -37,7 +37,7 @@ public class AppTest
      */
     public void testProcessInput()
     {
-        Assert.assertEquals("Arg: "+INPUT, App.processInput(INPUT));
+        Assert.assertEquals(INPUT+" true", App.processInput(INPUT));
 
     }
 }
